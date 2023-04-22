@@ -1,16 +1,55 @@
-<mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
-      <p>Auto-resizing sidenav</p>
-      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-      <button (click)="showFiller = !showFiller" mat-raised-button>
-        Toggle extra text
-      </button>
-    </mat-drawer>
-  
-    <div class="example-sidenav-content">
-      <button type="button" mat-button (click)="drawer.toggle()">
-        Toggle sidenav
-      </button>
-    </div>
-  
-  </mat-drawer-container>
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <img src="assets/img/logo-sistema.jpg" alt="Imagem de navegação" />
+    <mat-nav-list class="nav-list">
+      <a mat-list-item routerLink="home">
+        <i class="material-icons">home</i>
+        Home
+      </a>
+      <a mat-list-item routerLink="">
+        <i class="material-icons">person</i>
+        Clientes
+      </a>
+      <a mat-list-item routerLink="">
+        <i class="material-icons">account_circle</i>
+        Fornecedores
+      </a>
+      <a mat-list-item href="" target="_blank">
+        <i class="material-icons">all_inbox</i>
+        Produtos
+      </a>
+      <a mat-list-item href="" target="_blank">
+        <i class="material-icons">shopping_cart_checkout</i>
+        Vendas
+      </a>
+      <a mat-list-item href="" target="_blank">
+        <i class="material-icons">construction</i>
+        Ferramentas
+      </a>
+      <a mat-list-item href="" target="_blank">
+        <i class="material-icons">hdr_auto</i>
+        Sobre
+      </a>
+
+      <a mat-list-item href="" target="_blank">
+        <i class="material-icons">help_center</i>
+        Ajuda
+      </a>
+      <a mat-list-item>
+        <i class="material-icons">exit_to_app</i>
+        Logout
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <button
+      class="menu mat-elevation-z8"
+      (click)="drawer.toggle()"
+      mat-icon-button
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
