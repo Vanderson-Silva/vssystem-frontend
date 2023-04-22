@@ -19,7 +19,8 @@ img {
   margin-right: 0.6rem;
 }
 .menu {
-  margin: 1rem 0 0 1rem;
+  display: flex;
+  margin-top: -49px;
   color: white;
   background: linear-gradient(
     180deg,
