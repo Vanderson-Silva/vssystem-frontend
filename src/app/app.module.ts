@@ -17,6 +17,7 @@ import { HomeComponent } from "./components/home/home.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { SidenavComponent } from "./components/sidenav/sidenav.component";
 import { MatCardModule } from "@angular/material/card";
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MatCardModule } from "@angular/material/card";
     ClienteListComponent,
     HeaderComponent,
     HomeComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
