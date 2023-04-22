@@ -6,18 +6,25 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatTableModule } from "@angular/material/table";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatPaginatorModule } from "@angular/material/paginator";
-import { SidenavComponent } from "./components/home/sidenav/sidenav.component";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { ClienteListComponent } from "./components/cliente/cliente-list/cliente-list.component";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from "@angular/material/icon";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatButtonModule } from "@angular/material/button";
-import { MatListModule } from '@angular/material/list';
-
+import { MatListModule } from "@angular/material/list";
+import { HomeComponent } from "./components/home/home.component";
+import { HeaderComponent } from "./components/header/header.component";
+import { SidenavComponent } from "./components/sidenav/sidenav.component";
 
 @NgModule({
-  declarations: [AppComponent, SidenavComponent, ClienteListComponent],
+  declarations: [
+    AppComponent,
+    SidenavComponent,
+    ClienteListComponent,
+    HeaderComponent,
+    HomeComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -30,8 +37,7 @@ import { MatListModule } from '@angular/material/list';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatListModule 
-    
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
