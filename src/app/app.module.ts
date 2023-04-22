@@ -16,6 +16,7 @@ import { MatListModule } from "@angular/material/list";
 import { HomeComponent } from "./components/home/home.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { SidenavComponent } from "./components/sidenav/sidenav.component";
+import { MatCardModule } from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { SidenavComponent } from "./components/sidenav/sidenav.component";
     MatIconModule,
     MatButtonModule,
     MatListModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,17 @@
+p {
+  text-align: justify;
+  padding: 1.5rem;
+}
+.card {
+  margin: auto;
+  background-color: white;
+}
+img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 1.5rem;
+  align-items: center;
+}
+.fundo-home {
+  padding: 0.5rem;
+}
