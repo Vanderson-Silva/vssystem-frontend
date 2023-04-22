@@ -3,7 +3,18 @@ import { RouterModule, Routes } from "@angular/router";
 import { SidenavComponent } from "./components/sidenav/sidenav.component";
 import { HomeComponent } from "./components/home/home.component";
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: "",
+    component: SidenavComponent,
+    children: [
+      {
+        path: "home",
+        component: HomeComponent,
+      },
+    ],
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
