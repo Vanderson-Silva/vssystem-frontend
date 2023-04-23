@@ -29,3 +29,22 @@ img {
     rgba(0, 212, 255, 1) 100%
   );
 }
+
+/* 320px — 480px: dispositivos móveis. */
+@media (max-width: 767px) {
+  .sidenav {
+    width: 8rem;
+  }
+  img {
+    width: 100%;
+    height: 3rem;
+    margin: 0.2rem auto 0.2rem auto;
+  }
+  .sidenav a {
+    color: white;
+  }
+
+  .sidenav i {
+    margin-right: 0.6rem;
+  }
+}
