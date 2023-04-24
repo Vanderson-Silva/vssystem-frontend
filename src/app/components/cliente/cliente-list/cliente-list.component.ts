@@ -1,12 +1,12 @@
-import { AfterViewInit, Component, ViewChild } from "@angular/core";
+import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
 import { MatPaginator } from "@angular/material/paginator";
 import { MatTableDataSource } from "@angular/material/table";
 
 export interface PeriodicElement {
-  id: number;
+  id?: number;
   nome: string;
+  dataNascimento: string;
   dataCadastro: string;
-  sexo: string;
   status: string;
   endereco: string;
   numero: number;
@@ -20,8 +20,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     id: 1,
     nome: "Hydrogen",
+    dataNascimento: "22/04/2023",
     dataCadastro: "22/04/2023",
-    sexo: "M",
     status: "A",
     endereco: "Besourinho Amtista",
     numero: 594,
@@ -33,8 +33,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     id: 2,
     nome: "Hydrogen",
+    dataNascimento: "22/04/2023",
     dataCadastro: "22/04/2023",
-    sexo: "M",
     status: "A",
     endereco: "Besourinho Amtista",
     numero: 594,
@@ -46,8 +46,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     id: 3,
     nome: "Hydrogen",
+    dataNascimento: "22/04/2023",
     dataCadastro: "22/04/2023",
-    sexo: "M",
     status: "A",
     endereco: "Besourinho Amtista",
     numero: 594,
@@ -59,8 +59,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     id: 4,
     nome: "Hydrogen",
+    dataNascimento: "22/04/2023",
     dataCadastro: "22/04/2023",
-    sexo: "M",
     status: "A",
     endereco: "Besourinho Amtista",
     numero: 594,
@@ -72,8 +72,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     id: 5,
     nome: "Hydrogen",
+    dataNascimento: "22/04/2023",
     dataCadastro: "22/04/2023",
-    sexo: "M",
     status: "A",
     endereco: "Besourinho Amtista",
     numero: 594,
@@ -85,8 +85,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     id: 6,
     nome: "Hydrogen",
+    dataNascimento: "22/04/2023",
     dataCadastro: "22/04/2023",
-    sexo: "M",
     status: "A",
     endereco: "Besourinho Amtista",
     numero: 594,
@@ -98,8 +98,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {
     id: 7,
     nome: "Hydrogen",
+    dataNascimento: "22/04/2023",
     dataCadastro: "22/04/2023",
-    sexo: "M",
     status: "A",
     endereco: "Besourinho Amtista",
     numero: 594,
@@ -115,12 +115,15 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: "./cliente-list.component.html",
   styleUrls: ["./cliente-list.component.css"],
 })
-export class ClienteListComponent implements AfterViewInit {
+export class ClienteListComponent implements OnInit {
+  ngOnInit(): void {
+    this.dataSource.paginator = this.paginator;
+  }
   displayedColumns: string[] = [
     "id",
     "nome",
+    "dataNascimento",
     "dataCadastro",
-    "sexo",
     "status",
     "endereco",
     "numero",
@@ -132,8 +135,4 @@ export class ClienteListComponent implements AfterViewInit {
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-  }
 }
