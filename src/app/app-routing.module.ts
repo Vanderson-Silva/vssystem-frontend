@@ -9,14 +9,8 @@ const routes: Routes = [
     path: "",
     component: SidenavComponent,
     children: [
-      {
-        path: "home",
-        component: HomeComponent,
-      },
-      {
-        path: "listar-clientes",
-        component: ClienteListComponent,
-      },
+      { path: "home", component: HomeComponent },
+      { path: "clientes", component: ClienteListComponent },
     ],
   },
 ];
