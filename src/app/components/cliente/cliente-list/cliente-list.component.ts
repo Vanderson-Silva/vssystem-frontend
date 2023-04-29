@@ -11,6 +11,7 @@ import { ClienteService } from "src/app/services/cliente.service";
 })
 export class ClienteListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+
   constructor(private service: ClienteService) {}
 
   ngOnInit(): void {
@@ -41,5 +42,10 @@ export class ClienteListComponent implements OnInit {
       this.dataSource = new MatTableDataSource<Cliente>(resposta);
       this.dataSource.paginator = this.paginator;
     });
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 }
