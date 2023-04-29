@@ -36,6 +36,7 @@ export class ClienteListComponent implements OnInit {
   ];
   dataSource = new MatTableDataSource<Cliente>(this.ELEMENT_DATA);
 
+  // Metodo de Listar todos os Clientes
   findAll() {
     this.service.findAll().subscribe((resposta) => {
       this.ELEMENT_DATA = resposta;
@@ -44,6 +45,7 @@ export class ClienteListComponent implements OnInit {
     });
   }
 
+  // metodo busca de Pesquisa.
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();

@@ -10,8 +10,27 @@ table th {
   background-color: rgb(2, 2, 51);
   color: white;
 }
-
-.mat-mdc-form-field {
-  font-size: 14px;
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  padding: auto;
+}
+.pesquisar {
+  display: inline-block;
   width: 100%;
+  font-size: 14px;
+  height: 30px;
+  margin-right: 2px;
+
+  padding-bottom: 1.5rem;
+}
+
+.botao-novo-cliente {
+  display: inline-block;
+  width: 30%;
+  cursor: pointer;
+  height: 56px;
+  font-size: 14px;
 }
