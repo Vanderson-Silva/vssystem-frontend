@@ -18,6 +18,7 @@ import { HeaderComponent } from "./components/header/header.component";
 import { SidenavComponent } from "./components/sidenav/sidenav.component";
 import { MatCardModule } from "@angular/material/card";
 import { FooterComponent } from "./components/footer/footer.component";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { FooterComponent } from "./components/footer/footer.component";
     MatButtonModule,
     MatListModule,
     MatCardModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
