@@ -1,6 +1,11 @@
+.container {
+  width: 98%;
+  margin: auto;
+  background-color: rgb(2, 2, 51);
+}
+
 p {
   text-align: justify;
-  padding: 1.5rem;
 }
 .card {
   margin: auto;
@@ -9,9 +14,6 @@ p {
 img {
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 1.5rem;
+
   align-items: center;
-}
-.fundo-home {
-  padding: 0.5rem;
 }

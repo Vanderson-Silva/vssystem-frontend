@@ -1,9 +1,11 @@
 .container {
   height: 100%;
+  width: 98%;
+  margin: auto;
 }
 
 .sidenav {
-  width: 13rem;
+  width: 12rem;
 }
 
 img {
@@ -11,6 +13,7 @@ img {
   height: 5.5rem;
   margin: 0.8rem auto 1rem auto;
 }
+
 .sidenav a {
   color: white;
 }
@@ -18,33 +21,25 @@ img {
 .sidenav i {
   margin-right: 0.6rem;
 }
+
 .menu {
+  left: 0.8rem;
   display: flex;
-  margin-top: -49px;
   color: white;
-  background: linear-gradient(
-    180deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(37, 97, 207, 1) 0%,
-    rgba(0, 212, 255, 1) 100%
-  );
 }
 
-/* 320px — 480px: dispositivos móveis. */
-@media (max-width: 767px) {
-  .sidenav {
-    width: 8rem;
-  }
-  img {
-    width: 100%;
-    height: 3rem;
-    margin: 0.2rem auto 0.2rem auto;
-  }
-  .sidenav a {
-    color: white;
-  }
+.sidenav a {
+  color: white;
+}
 
-  .sidenav i {
-    margin-right: 0.6rem;
-  }
+.sidenav i {
+  margin-right: 0.6rem;
+}
+
+.menu {
+  position: absolute;
+  transform: translateY(-3rem);
+  display: flex;
+  color: white;
+  left: 0.8rem;
 }
