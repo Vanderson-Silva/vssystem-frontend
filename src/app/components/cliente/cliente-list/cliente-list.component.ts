@@ -51,6 +51,7 @@ export class ClienteListComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  // metodo para excluir um cliente
   delete(id: any): void {
     this.service.delete(id).subscribe((resposta) => {
       if (resposta == null) {
