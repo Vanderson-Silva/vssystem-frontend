@@ -21,7 +21,7 @@ import { MatTableModule } from "@angular/material/table";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
-import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { MatDialogModule } from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -31,7 +31,6 @@ import { ClienteDeleteComponent } from './components/cliente/cliente-delete/clie
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    ClienteDeleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +49,7 @@ import { ClienteDeleteComponent } from './components/cliente/cliente-delete/clie
     HttpClientModule,
     MatInputModule,
     MatSnackBarModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

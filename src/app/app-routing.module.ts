@@ -3,7 +3,6 @@ import { RouterModule, Routes } from "@angular/router";
 import { SidenavComponent } from "./components/sidenav/sidenav.component";
 import { HomeComponent } from "./components/home/home.component";
 import { ClienteListComponent } from "./components/cliente/cliente-list/cliente-list.component";
-import { ClienteDeleteComponent } from "./components/cliente/cliente-delete/cliente-delete.component";
 
 const routes: Routes = [
   {
@@ -12,7 +11,6 @@ const routes: Routes = [
     children: [
       { path: "home", component: HomeComponent },
       { path: "clientes", component: ClienteListComponent },
-      { path: "clientes/delete/:id", component: ClienteDeleteComponent },
     ],
   },
 ];

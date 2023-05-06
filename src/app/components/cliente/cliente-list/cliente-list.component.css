@@ -48,6 +48,12 @@ th {
   font-size: 14px;
 }
 
+.botoes {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
 .edit {
   color: rgb(251, 215, 75);
   padding-right: 1rem;

@@ -9,8 +9,6 @@ import { MatSnackBar } from "@angular/material/snack-bar";
   providedIn: "root",
 })
 export class ClienteService {
-  baseUrl = environment.baseUrl;
-
   constructor(private http: HttpClient, private snack: MatSnackBar) {}
 
   // Metodo Responsavel por listar todos clientes.
@@ -20,7 +18,8 @@ export class ClienteService {
 
   // metodo para Excluir um cliente pelo id.
   delete(id: any): Observable<void> {
-    const url = `${this.baseUrl}/${id}`;
+    const url = `${environment.baseUrl}/api/clientes/${id}`;
+    console.log(url);
     return this.http.delete<void>(url);
   }
   // metodo para Exibir uma mensagem de confirmacao ao usuario.

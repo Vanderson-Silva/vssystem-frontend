@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
+import { MatDialog, MatDialogRef } from "@angular/material/dialog";
 import { MatPaginator } from "@angular/material/paginator";
 import { MatTableDataSource } from "@angular/material/table";
 import { Cliente } from "src/app/models/cliente";
 import { ClienteService } from "src/app/services/cliente.service";
+import { DialogComponent } from "../../dialog/dialog.component";
 
 @Component({
   selector: "app-cliente-list",
@@ -12,7 +14,7 @@ import { ClienteService } from "src/app/services/cliente.service";
 export class ClienteListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(private service: ClienteService) {}
+  constructor(private service: ClienteService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.findAll();
@@ -53,9 +55,23 @@ export class ClienteListComponent implements OnInit {
 
   // metodo para excluir um cliente
   delete(id: any): void {
-    this.service.delete(id).subscribe((resposta) => {
-      if (resposta == null) {
-        this.service.message("Cliente Excluido com Sucesso!");
+    const dialogRef = this.dialog.open(DialogComponent, {
+      data: "Deseja realmente excluir esse cliente?",
+    });
+    dialogRef.afterClosed().subscribe((result: boolean) => {
+      if (result) {
+        this.service.delete(id).subscribe(
+          (resposta) => {
+            if (resposta == null) {
+              this.service.message("Cliente Excluido com Sucesso!");
+            }
+            this.findAll();
+          },
+          (error) => {
+            console.error("Erro ao excluir cliente:", error);
+            this.service.message("Erro ao excluir cliente.");
+          }
+        );
       }
     });
   }

@@ -1,0 +1,38 @@
+/* Estilo para o conteúdo do dialog */
+.mat-dialog-content {
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilo para as ações do dialog */
+.mat-dialog-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+/* Estilo para os botões no dialog */
+.mat-dialog-actions button {
+  margin: 0 10px;
+  min-width: 75px;
+  min-height: 42px;
+}
+
+/* Estilo para o botão de confirmação */
+.mat-dialog-actions button:first-child {
+  background-color: rgb(10, 194, 93);
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Estilo para o botão de cancelamento */
+.mat-dialog-actions button:last-child {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
