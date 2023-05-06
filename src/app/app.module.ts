@@ -22,6 +22,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { MatDialogModule } from "@angular/material/dialog";
+import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { MatDialogModule } from "@angular/material/dialog";
     HeaderComponent,
     HomeComponent,
     FooterComponent,
+    ClienteCreateComponent,
   ],
   imports: [
     BrowserModule,
