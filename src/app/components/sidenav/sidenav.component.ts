@@ -9,6 +9,6 @@ import { Router } from "@angular/router";
 export class SidenavComponent implements OnInit {
   constructor(private router: Router) {}
   ngOnInit(): void {
-    this.router.navigate(["clientes"]);
+    this.router.navigate(["clientes-create"]);
   }
 }

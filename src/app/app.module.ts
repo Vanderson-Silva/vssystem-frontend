@@ -22,7 +22,10 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { MatDialogModule } from "@angular/material/dialog";
-import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatSelectModule } from "@angular/material/select";
+import { FormsModule } from "@angular/forms";
+import { ClienteCreateComponent } from "./components/cliente/cliente-create/cliente-create.component";
 
 @NgModule({
   declarations: [
@@ -36,6 +39,7 @@ import { ClienteCreateComponent } from './components/cliente/cliente-create/clie
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTableModule,
@@ -52,6 +56,8 @@ import { ClienteCreateComponent } from './components/cliente/cliente-create/clie
     MatInputModule,
     MatSnackBarModule,
     MatDialogModule,
+    MatDatepickerModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

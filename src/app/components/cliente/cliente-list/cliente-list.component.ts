@@ -5,6 +5,7 @@ import { MatTableDataSource } from "@angular/material/table";
 import { Cliente } from "src/app/models/cliente";
 import { ClienteService } from "src/app/services/cliente.service";
 import { DialogComponent } from "../../dialog/dialog.component";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-cliente-list",
@@ -14,7 +15,11 @@ import { DialogComponent } from "../../dialog/dialog.component";
 export class ClienteListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(private service: ClienteService, public dialog: MatDialog) {}
+  constructor(
+    private service: ClienteService,
+    public dialog: MatDialog,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.findAll();
@@ -37,6 +42,10 @@ export class ClienteListComponent implements OnInit {
     "acoes",
   ];
   dataSource = new MatTableDataSource<Cliente>(this.ELEMENT_DATA);
+
+  cadastrar(): void {
+    this.router.navigate(["clientes-create"]);
+  }
 
   // Metodo de Listar todos os Clientes
   findAll() {

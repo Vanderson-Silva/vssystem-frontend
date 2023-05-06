@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { SidenavComponent } from "./components/sidenav/sidenav.component";
 import { HomeComponent } from "./components/home/home.component";
 import { ClienteListComponent } from "./components/cliente/cliente-list/cliente-list.component";
+import { ClienteCreateComponent } from "./components/cliente/cliente-create/cliente-create.component";
 
 const routes: Routes = [
   {
@@ -10,7 +11,8 @@ const routes: Routes = [
     component: SidenavComponent,
     children: [
       { path: "home", component: HomeComponent },
-      { path: "clientes", component: ClienteListComponent },
+      { path: "clientes-list", component: ClienteListComponent },
+      { path: "clientes-create", component: ClienteCreateComponent },
     ],
   },
 ];
