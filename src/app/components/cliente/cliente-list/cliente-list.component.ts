@@ -30,7 +30,6 @@ export class ClienteListComponent implements OnInit {
   displayedColumns: string[] = [
     "id",
     "nome",
-    "dataNascimento",
     "dataCadastro",
     "status",
     "endereco",

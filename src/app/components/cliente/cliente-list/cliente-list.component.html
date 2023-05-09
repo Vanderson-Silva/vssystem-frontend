@@ -19,7 +19,7 @@
     </button>
   </div>
 
-  <div class="mat-elevation-z8">
+  <div class="table mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" class="sticky-header">
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef>Id</th>
@@ -29,13 +29,6 @@
       <ng-container matColumnDef="nome">
         <th mat-header-cell *matHeaderCellDef>Nome</th>
         <td mat-cell *matCellDef="let element">{{ element.nome }}</td>
-      </ng-container>
-
-      <ng-container matColumnDef="dataNascimento">
-        <th mat-header-cell *matHeaderCellDef>Data Nascimento</th>
-        <td mat-cell *matCellDef="let element">
-          {{ element.dataNascimento }}
-        </td>
       </ng-container>
 
       <ng-container matColumnDef="dataCadastro">
@@ -81,7 +74,9 @@
       <ng-container matColumnDef="acoes">
         <th mat-header-cell *matHeaderCellDef>Ações</th>
         <td mat-cell *matCellDef="let element">
-          <a routerLink=""> <i class="material-icons edit">edit</i></a>
+          <a mat-button class="botoes"
+            ><i class="material-icons edit">edit</i></a
+          >
           <a mat-button class="botoes" (click)="delete(element.id)"
             ><i class="material-icons delete">delete</i></a
           >

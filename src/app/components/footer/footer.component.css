@@ -7,7 +7,8 @@
   display: flex;
   align-items: center; /* centraliza verticalmente o conteúdo */
   justify-content: flex-end; /* alinha os itens ao fim da pagina */
-  background-color: white; /* cor de fundo */
+  background-color: rgb(2, 2, 51);
+  color: white;
 }
 p {
   padding-top: 1%;

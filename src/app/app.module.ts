@@ -26,7 +26,7 @@ import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatSelectModule } from "@angular/material/select";
 import { FormsModule } from "@angular/forms";
 import { ClienteCreateComponent } from "./components/cliente/cliente-create/cliente-create.component";
-
+import { MatNativeDateModule } from "@angular/material/core";
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +58,7 @@ import { ClienteCreateComponent } from "./components/cliente/cliente-create/clie
     MatDialogModule,
     MatDatepickerModule,
     MatSelectModule,
+    MatNativeDateModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

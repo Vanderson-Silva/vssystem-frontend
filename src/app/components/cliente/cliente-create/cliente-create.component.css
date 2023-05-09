@@ -1,18 +1,40 @@
 .container {
-  padding-top: 5px;
-  width: 98%;
+  width: 100%;
   margin: auto;
-  background-color: red;
-}
-.form {
-  width: 98%;
-  width: 100%;
+  text-align: center; /* Alinha os filhos à direita */
+  padding-top: 0.8rem;
 }
 
-.example-full-width {
+.table-full-width {
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  padding: 2rem;
+  background-color: white;
+}
+mat-form-field {
   width: 100%;
 }
+.buttons {
+  margin: auto;
+  padding-right: 3.5rem;
+}
+.buttons-container {
+  text-align: right;
+}
+.buttons button:nth-child(1) {
+  background-color: rgb(2, 2, 51);
+  color: white;
+  margin-right: 1rem;
+}
+.buttons button:nth-child(2) {
+  background-color: rgb(244, 66, 54);
+  color: white;
+}
 
-td {
-  padding-right: 8px;
+@media only screen and (max-width: 600px) {
+  table td {
+    display: block;
+    width: 100%;
+  }
 }

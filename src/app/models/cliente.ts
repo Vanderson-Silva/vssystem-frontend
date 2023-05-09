@@ -1,7 +1,6 @@
 export interface Cliente {
   id?: any;
   nome: string;
-  dataNascimento: any;
   dataCadastro: any;
   status: string;
   endereco: string;

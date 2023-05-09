@@ -1,7 +1,7 @@
 .container {
-  width: 98%;
+  padding-top: 0.8rem;
+  width: 100%;
   margin: auto;
-  background-color: rgb(2, 2, 51);
 }
 
 p {
@@ -10,10 +10,19 @@ p {
 .card {
   margin: auto;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 img {
+  display: block;
+  margin: auto;
+  width: 50vw;
   background-size: cover;
   background-repeat: no-repeat;
-
   align-items: center;
+}
+p {
+  padding-top: 1rem;
 }

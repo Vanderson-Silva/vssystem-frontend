@@ -1,17 +1,17 @@
 .container {
-  width: 98%;
+  padding-top: 0.8rem;
+  width: 100%;
   margin: auto;
   background-color: rgb(2, 2, 51);
 }
-table {
-  width: 100%;
-  border-collapse: collapse;
-  overflow-x: auto;
-  max-height: 30%; /*definindo uma altura máxima para a tabela */
-  overflow-y: auto; /* ativando a barra de rolagem vertical */
-  display: block;
-  position: relative;
-  white-space: nowrap;
+
+.table {
+  margin: auto;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem;
 }
 
 table th {
@@ -21,6 +21,7 @@ table th {
 table td,
 th {
   border: none;
+  padding-bottom: 2rem;
 }
 
 .search-container {
@@ -52,11 +53,11 @@ th {
   border: none;
   outline: none;
   box-shadow: none;
+  max-width: 1px;
 }
 
 .edit {
   color: rgb(251, 215, 75);
-  padding-right: 0.1rem;
 }
 .delete {
   color: rgb(237, 68, 61);
@@ -64,7 +65,9 @@ th {
 
 .paginator {
   width: 100%;
+  margin: auto;
   position: fixed;
   bottom: 0;
   padding-bottom: 1.5rem;
+  background-color: white;
 }
