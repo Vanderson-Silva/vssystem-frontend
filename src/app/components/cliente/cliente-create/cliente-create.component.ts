@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router";
 import { Cliente } from "src/app/models/cliente";
 
 @Component({
@@ -7,6 +8,8 @@ import { Cliente } from "src/app/models/cliente";
   styleUrls: ["./cliente-create.component.css"],
 })
 export class ClienteCreateComponent {
+  constructor(private router: Router) {}
+
   //criando uma instancia de Todo
   cliente: Cliente = {
     nome: "",
@@ -25,5 +28,9 @@ export class ClienteCreateComponent {
     this.cliente.dataCadastro = `${dataCadastro.getDate()}/${
       dataCadastro.getMonth() + 1
     }/${dataCadastro.getFullYear()}`;
+  }
+
+  cancelar(): void {
+    this.router.navigate(["clientes-list"]);
   }
 }
