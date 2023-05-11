@@ -5,8 +5,8 @@ import { ClienteService } from "src/app/services/cliente.service";
 
 @Component({
   selector: "app-cliente-create",
-  templateUrl: "./cliente-create.component.html",
-  styleUrls: ["./cliente-create.component.css"],
+  templateUrl: "./clientecreate.component.html",
+  styleUrls: ["./clientecreate.component.css"],
 })
 export class ClienteCreateComponent {
   constructor(private router: Router, private clienteService: ClienteService) {}
@@ -32,7 +32,7 @@ export class ClienteCreateComponent {
   }
 
   cancelar(): void {
-    this.router.navigate(["clientes-list"]);
+    this.router.navigate(["clientelist"]);
   }
 
   create(): void {
@@ -40,11 +40,11 @@ export class ClienteCreateComponent {
     this.clienteService.create(this.cliente).subscribe(
       (resposta) => {
         this.clienteService.message("Cliente Salvo com Sucesso!");
-        this.router.navigate(["clientes-list"]);
+        this.router.navigate(["clientelist"]);
       },
       (err) => {
         this.clienteService.message("Erro ao salvar o Cliente");
-        this.router.navigate(["clientes-list"]);
+        this.router.navigate(["clientelist"]);
       }
     );
   }

@@ -16,13 +16,15 @@ p {
 }
 
 img {
-  display: block;
+  display: flex;
   margin: auto;
-  width: 50vw;
+  width: 100%;
+  height: auto;
   background-size: cover;
   background-repeat: no-repeat;
   align-items: center;
 }
 p {
   padding-top: 1rem;
+  padding-bottom: 2rem;
 }

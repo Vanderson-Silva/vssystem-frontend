@@ -3,6 +3,13 @@
     <tr>
       <td>
         <mat-form-field class="example-full-width">
+          <mat-label>Id</mat-label>
+          <input [(ngModel)]="cliente.id" class="input-field" matInput />
+          <mat-icon matSuffix>Id</mat-icon>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width">
           <mat-label>Nome Completo</mat-label>
           <input [(ngModel)]="cliente.nome" class="input-field" matInput />
           <mat-icon matSuffix>person</mat-icon>
@@ -97,17 +104,12 @@
     <tr>
       <td colspan="3">
         <div class="buttons buttons-container">
-          <button
-            class="btn-criar"
-            (click)="create()"
-            mat-stroked-button
-            color="primary"
-          >
+          <button class="btn-criar" mat-stroked-button color="primary">
             Salvar
           </button>
           <button
-            class="btn-cancelar"
             (click)="cancelar()"
+            class="btn-cancelar"
             mat-stroked-button
             color="warn"
           >

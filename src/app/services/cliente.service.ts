@@ -9,17 +9,18 @@ import { MatSnackBar } from "@angular/material/snack-bar";
   providedIn: "root",
 })
 export class ClienteService {
+  baseUrlCliente = environment.baseUrlCliente;
+
   constructor(private http: HttpClient, private snack: MatSnackBar) {}
 
   // Metodo Responsavel por listar todos clientes.
   findAll(): Observable<Cliente[]> {
-    return this.http.get<Cliente[]>(`${environment.baseUrl}/api/clientes`);
+    return this.http.get<Cliente[]>(this.baseUrlCliente);
   }
 
   // metodo para Excluir um cliente pelo id.
   delete(id: any): Observable<void> {
-    const url = `${environment.baseUrl}/api/clientes/${id}`;
-    console.log(url);
+    const url = `${this.baseUrlCliente}/${id}`;
     return this.http.delete<void>(url);
   }
   // metodo para Exibir uma mensagem de confirmacao ao usuario.
@@ -30,18 +31,20 @@ export class ClienteService {
       duration: 4000,
     });
   }
+
   // metodo para salvar um cliente.
   create(cliente: Cliente): Observable<Cliente> {
-    return this.http.post<Cliente>(`${environment.baseUrl}/api`, cliente);
-  }
-  // metodo para Atualizar um cliente.
-  update(cliente: Cliente): Observable<Cliente> {
-    const url = `${environment.baseUrl}/api/clientes/${cliente.id}`;
-    return this.http.put<Cliente>(url, cliente);
+    return this.http.post<Cliente>(this.baseUrlCliente, cliente);
   }
 
   findById(id: any): Observable<Cliente> {
-    const url = `${environment.baseUrl}/api/${id}`;
+    const url = `${this.baseUrlCliente}/${id}`;
     return this.http.get<Cliente>(url);
+  }
+
+  // metodo para Atualizar um cliente.
+  update(cliente: Cliente): Observable<Cliente> {
+    const url = `${this.baseUrlCliente}/${cliente.id}`;
+    return this.http.put<Cliente>(url, cliente);
   }
 }

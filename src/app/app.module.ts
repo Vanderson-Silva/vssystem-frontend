@@ -5,7 +5,7 @@ import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatSidenavModule } from "@angular/material/sidenav";
-import { ClienteListComponent } from "./components/cliente/cliente-list/cliente-list.component";
+import { ClienteListComponent } from "./components/cliente/clientelist/clientelist.component";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from "@angular/material/icon";
 import { MatMenuModule } from "@angular/material/menu";
@@ -25,9 +25,9 @@ import { MatDialogModule } from "@angular/material/dialog";
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatSelectModule } from "@angular/material/select";
 import { FormsModule } from "@angular/forms";
-import { ClienteCreateComponent } from "./components/cliente/cliente-create/cliente-create.component";
+import { ClienteCreateComponent } from "./components/cliente/clientecreate/clientecreate.component";
 import { MatNativeDateModule } from "@angular/material/core";
-import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
+import { ClienteUpdateComponent } from "./components/cliente/clienteupdate/clienteupdate.component";
 @NgModule({
   declarations: [
     AppComponent,

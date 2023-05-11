@@ -9,8 +9,8 @@ import { Router } from "@angular/router";
 
 @Component({
   selector: "app-cliente-list",
-  templateUrl: "./cliente-list.component.html",
-  styleUrls: ["./cliente-list.component.css"],
+  templateUrl: "./clientelist.component.html",
+  styleUrls: ["./clientelist.component.css"],
 })
 export class ClienteListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -43,7 +43,7 @@ export class ClienteListComponent implements OnInit {
   dataSource = new MatTableDataSource<Cliente>(this.ELEMENT_DATA);
 
   cadastrar(): void {
-    this.router.navigate(["clientes-create"]);
+    this.router.navigate(["clientecreate"]);
   }
 
   // Metodo de Listar todos os Clientes

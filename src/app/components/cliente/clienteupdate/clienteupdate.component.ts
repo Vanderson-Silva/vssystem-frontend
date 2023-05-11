@@ -5,8 +5,8 @@ import { ClienteService } from "src/app/services/cliente.service";
 
 @Component({
   selector: "app-cliente-update",
-  templateUrl: "./cliente-update.component.html",
-  styleUrls: ["./cliente-update.component.css"],
+  templateUrl: "./clienteupdate.component.html",
+  styleUrls: ["./clienteupdate.component.css"],
 })
 export class ClienteUpdateComponent implements OnInit {
   constructor(
@@ -43,12 +43,36 @@ export class ClienteUpdateComponent implements OnInit {
     this.service.update(this.cliente).subscribe(
       (resposta) => {
         this.service.message("Cliente Atualizado com Sucesso!");
-        this.router.navigate(["clientes-list"]);
+        this.router.navigate(["clienteslist"]);
       },
       (err) => {
         this.service.message("Erro ao Atualizar Cliente!");
-        this.router.navigate(["clientes-list"]);
+        this.router.navigate(["clienteslist"]);
       }
     );
+  }
+
+  formataData(): void {
+    let dataCadastro = new Date(this.cliente.dataCadastro);
+    this.cliente.dataCadastro = `${dataCadastro.getDate()}/${
+      dataCadastro.getMonth() + 1
+    }/${dataCadastro.getFullYear()}`;
+  }
+
+  create(): void {
+    this.formataData();
+    this.service.create(this.cliente).subscribe(
+      (resposta) => {
+        this.service.message("Cliente Alterado com Sucesso!");
+        this.router.navigate(["clientelist"]);
+      },
+      (err) => {
+        this.service.message("Erro ao Alterar o Cliente");
+        this.router.navigate(["clientelist"]);
+      }
+    );
+  }
+  cancelar(): void {
+    this.router.navigate(["clientelist"]);
   }
 }

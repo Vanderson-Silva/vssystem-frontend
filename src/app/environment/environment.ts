@@ -1,5 +1,6 @@
 export const environment = {
   production: false,
   // vamos criar uma variavel e passar o nosso caminho do BackEnd.
-  baseUrl: "http://localhost:8080",
+  baseUrlCliente: "http://localhost:8080/clientes",
+  baseUrlFornecedor: "http://localhost:8080/fornecedores",
 };
