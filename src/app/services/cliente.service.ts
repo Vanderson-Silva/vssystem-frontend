@@ -39,4 +39,9 @@ export class ClienteService {
     const url = `${environment.baseUrl}/api/clientes/${cliente.id}`;
     return this.http.put<Cliente>(url, cliente);
   }
+
+  findById(id: any): Observable<Cliente> {
+    const url = `${environment.baseUrl}/api/${id}`;
+    return this.http.get<Cliente>(url);
+  }
 }
