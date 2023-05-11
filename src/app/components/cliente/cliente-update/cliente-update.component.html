@@ -1,1 +1,120 @@
-<p>cliente-update works!</p>
+<div class="container">
+  <table class="table-full-width">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Nome Completo</mat-label>
+          <input [(ngModel)]="cliente.nome" class="input-field" matInput />
+          <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+      </td>
+
+      <td>
+        <mat-form-field class="data-finalizar" appearance="fill">
+          <mat-label>Data Cadastro</mat-label>
+          <input
+            [(ngModel)]="cliente.dataCadastro"
+            name=""
+            matInput
+            [matDatepicker]="dp3"
+            disabled
+          />
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="dp3"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+        </mat-form-field>
+      </td>
+
+      <td>
+        <mat-form-field appearance="fill">
+          <mat-label>Status</mat-label>
+          <mat-select>
+            <mat-option value="one">Ativo</mat-option>
+            <mat-option value="two">Inativo</mat-option>
+          </mat-select>
+          <mat-icon matSuffix>expand_more</mat-icon>
+        </mat-form-field>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Endereco</mat-label>
+          <input [(ngModel)]="cliente.endereco" name="" matInput />
+          <mat-icon matSuffix>location_on</mat-icon>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Numero</mat-label>
+          <input [(ngModel)]="cliente.numero" name="" matInput />
+          <mat-icon matSuffix> home</mat-icon>
+        </mat-form-field>
+      </td>
+
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Bairro</mat-label>
+          <input [(ngModel)]="cliente.bairro" name="" matInput />
+          <mat-icon matSuffix>streetview</mat-icon>
+        </mat-form-field>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Cidade</mat-label>
+          <input [(ngModel)]="cliente.cidade" name="" matInput />
+          <mat-icon matSuffix> location_city</mat-icon>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Telefone</mat-label>
+          <span matPrefix>+55 &nbsp;</span>
+          <input
+            [(ngModel)]="cliente.telefone"
+            name=""
+            type="tel"
+            matInput
+            placeholder="043-3256-1234"
+          />
+          <mat-icon matSuffix>settings_phone</mat-icon>
+        </mat-form-field>
+      </td>
+
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Celuar</mat-label>
+          <input [(ngModel)]="cliente.celular" name="" matInput />
+          <mat-icon matSuffix>settings_cell</mat-icon>
+        </mat-form-field>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="3">
+        <div class="buttons buttons-container">
+          <button
+            class="btn-criar"
+            (click)="create()"
+            mat-stroked-button
+            color="primary"
+          >
+            Salvar
+          </button>
+          <button
+            class="btn-cancelar"
+            (click)="cancelar()"
+            mat-stroked-button
+            color="warn"
+          >
+            Cancelar
+          </button>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
