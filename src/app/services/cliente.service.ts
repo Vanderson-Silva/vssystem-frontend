@@ -1,7 +1,7 @@
+import { Cliente } from "src/app/models/cliente";
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { Cliente } from "../models/cliente";
 import { environment } from "../environment/environment";
 import { MatSnackBar } from "@angular/material/snack-bar";
 
@@ -29,5 +29,14 @@ export class ClienteService {
       verticalPosition: "top",
       duration: 4000,
     });
+  }
+  // metodo para salvar um cliente.
+  create(cliente: Cliente): Observable<Cliente> {
+    return this.http.post<Cliente>(`${environment.baseUrl}/api`, cliente);
+  }
+  // metodo para Atualizar um cliente.
+  update(cliente: Cliente): Observable<Cliente> {
+    const url = `${environment.baseUrl}/api/clientes/${cliente.id}`;
+    return this.http.put<Cliente>(url, cliente);
   }
 }

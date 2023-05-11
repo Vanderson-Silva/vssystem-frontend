@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 import { Cliente } from "src/app/models/cliente";
+import { ClienteService } from "src/app/services/cliente.service";
 
 @Component({
   selector: "app-cliente-create",
@@ -8,7 +9,7 @@ import { Cliente } from "src/app/models/cliente";
   styleUrls: ["./cliente-create.component.css"],
 })
 export class ClienteCreateComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private clienteService: ClienteService) {}
 
   //criando uma instancia de Todo
   cliente: Cliente = {
@@ -32,5 +33,19 @@ export class ClienteCreateComponent {
 
   cancelar(): void {
     this.router.navigate(["clientes-list"]);
+  }
+
+  create(): void {
+    this.formataData();
+    this.clienteService.create(this.cliente).subscribe(
+      (resposta) => {
+        this.clienteService.message("Cliente Salvo com Sucesso!");
+        this.router.navigate(["clientes-list"]);
+      },
+      (err) => {
+        this.clienteService.message("Erro ao salvar o Cliente");
+        this.router.navigate(["clientes-list"]);
+      }
+    );
   }
 }
