@@ -27,6 +27,7 @@ import { MatSelectModule } from "@angular/material/select";
 import { FormsModule } from "@angular/forms";
 import { ClienteCreateComponent } from "./components/cliente/cliente-create/cliente-create.component";
 import { MatNativeDateModule } from "@angular/material/core";
+import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,7 @@ import { MatNativeDateModule } from "@angular/material/core";
     HomeComponent,
     FooterComponent,
     ClienteCreateComponent,
+    ClienteUpdateComponent,
   ],
   imports: [
     BrowserModule,
