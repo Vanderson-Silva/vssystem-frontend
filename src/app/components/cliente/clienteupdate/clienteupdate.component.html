@@ -4,8 +4,13 @@
       <td>
         <mat-form-field class="example-full-width">
           <mat-label>Id</mat-label>
-          <input [(ngModel)]="cliente.id" class="input-field" matInput />
-          <mat-icon matSuffix>Id</mat-icon>
+          <input
+            [(ngModel)]="cliente.id"
+            class="input-field"
+            matInput
+            readonly
+          />
+          <mat-icon matSuffix></mat-icon>
         </mat-form-field>
       </td>
       <td>
@@ -17,29 +22,11 @@
       </td>
 
       <td>
-        <mat-form-field class="data-finalizar" appearance="fill">
-          <mat-label>Data Cadastro</mat-label>
-          <input
-            [(ngModel)]="cliente.dataCadastro"
-            name=""
-            matInput
-            [matDatepicker]="dp3"
-            disabled
-          />
-          <mat-datepicker-toggle
-            matIconSuffix
-            [for]="dp3"
-          ></mat-datepicker-toggle>
-          <mat-datepicker #dp3 disabled="false"></mat-datepicker>
-        </mat-form-field>
-      </td>
-
-      <td>
         <mat-form-field appearance="fill">
           <mat-label>Status</mat-label>
-          <mat-select>
-            <mat-option value="one">Ativo</mat-option>
-            <mat-option value="two">Inativo</mat-option>
+          <mat-select [(ngModel)]="cliente.status" name="status">
+            <mat-option value="Ativo">Ativo</mat-option>
+            <mat-option value="Inativo">Inativo</mat-option>
           </mat-select>
           <mat-icon matSuffix>expand_more</mat-icon>
         </mat-form-field>
@@ -56,7 +43,7 @@
       <td>
         <mat-form-field class="example-full-width">
           <mat-label>Numero</mat-label>
-          <input [(ngModel)]="cliente.numero" name="" matInput />
+          <input type="number" [(ngModel)]="cliente.numero" name="" matInput />
           <mat-icon matSuffix> home</mat-icon>
         </mat-form-field>
       </td>

@@ -11,6 +11,8 @@ import { ClienteService } from "src/app/services/cliente.service";
 export class ClienteCreateComponent {
   constructor(private router: Router, private clienteService: ClienteService) {}
 
+  status: string = "";
+
   //criando uma instancia de Todo
   cliente: Cliente = {
     nome: "",
@@ -24,6 +26,11 @@ export class ClienteCreateComponent {
     celular: "",
   };
 
+  // metodo para selecionar o evento de
+  onStatusSelected(event: any) {
+    this.status = event.value;
+  }
+
   formataData(): void {
     let dataCadastro = new Date(this.cliente.dataCadastro);
     this.cliente.dataCadastro = `${dataCadastro.getDate()}/${
@@ -35,8 +42,9 @@ export class ClienteCreateComponent {
     this.router.navigate(["clientelist"]);
   }
 
-  create(): void {
+  create(status: string): void {
     this.formataData();
+    this.cliente.status = status;
     this.clienteService.create(this.cliente).subscribe(
       (resposta) => {
         this.clienteService.message("Cliente Salvo com Sucesso!");

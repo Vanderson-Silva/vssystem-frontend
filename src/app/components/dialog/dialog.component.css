@@ -27,6 +27,7 @@
   color: white;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 /* Estilo para o botão de cancelamento */
@@ -35,4 +36,5 @@
   color: white;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
