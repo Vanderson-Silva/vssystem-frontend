@@ -1,15 +1,28 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { Cliente } from "src/app/models/cliente";
 import { ClienteService } from "src/app/services/cliente.service";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 @Component({
   selector: "app-cliente-create",
   templateUrl: "./clientecreate.component.html",
   styleUrls: ["./clientecreate.component.css"],
 })
-export class ClienteCreateComponent {
-  constructor(private router: Router, private clienteService: ClienteService) {}
+export class ClienteCreateComponent implements OnInit {
+  formulario!: FormGroup;
+
+  ngOnInit(): void {
+    this.formulario = this.formBuilder.group({
+      nome: ["", Validators.required],
+    });
+  }
+
+  constructor(
+    private router: Router,
+    private clienteService: ClienteService,
+    private formBuilder: FormBuilder
+  ) {}
 
   status: string = "";
 

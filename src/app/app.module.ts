@@ -28,7 +28,6 @@ import { FormsModule } from "@angular/forms";
 import { ClienteCreateComponent } from "./components/cliente/clientecreate/clientecreate.component";
 import { MatNativeDateModule } from "@angular/material/core";
 import { ClienteUpdateComponent } from "./components/cliente/clienteupdate/clienteupdate.component";
-import { CurrencyMaskModule } from "ng2-currency-mask";
 
 @NgModule({
   declarations: [
@@ -63,7 +62,6 @@ import { CurrencyMaskModule } from "ng2-currency-mask";
     MatDatepickerModule,
     MatSelectModule,
     MatNativeDateModule,
-    CurrencyMaskModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
