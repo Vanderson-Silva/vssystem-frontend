@@ -43,7 +43,13 @@
       <td>
         <mat-form-field class="example-full-width">
           <mat-label>Numero</mat-label>
-          <input type="number" [(ngModel)]="cliente.numero" name="" matInput />
+          <input
+            type="text"
+            onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+            [(ngModel)]="cliente.numero"
+            name=""
+            matInput
+          />
           <mat-icon matSuffix> home</mat-icon>
         </mat-form-field>
       </td>
