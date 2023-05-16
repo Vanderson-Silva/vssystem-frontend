@@ -16,7 +16,12 @@
       <td>
         <mat-form-field class="example-full-width">
           <mat-label>Nome Completo</mat-label>
-          <input [(ngModel)]="cliente.nome" class="input-field" matInput />
+          <input
+            [(ngModel)]="cliente.nome"
+            class="input-field"
+            matInput
+            mask="capitalize"
+          />
           <!-- <mat-icon matSuffix>person</mat-icon>-->
         </mat-form-field>
       </td>
@@ -37,7 +42,12 @@
       <td>
         <mat-form-field class="example-full-width">
           <mat-label>Endereco</mat-label>
-          <input [(ngModel)]="cliente.endereco" name="" matInput />
+          <input
+            [(ngModel)]="cliente.endereco"
+            name=""
+            matInput
+            mask="capitalize"
+          />
           <!--  <mat-icon matSuffix>location_on</mat-icon>-->
         </mat-form-field>
       </td>
@@ -58,7 +68,12 @@
       <td>
         <mat-form-field class="example-full-width">
           <mat-label>Bairro</mat-label>
-          <input [(ngModel)]="cliente.bairro" name="" matInput />
+          <input
+            [(ngModel)]="cliente.bairro"
+            name=""
+            matInput
+            mask="capitalize"
+          />
           <!--  <mat-icon matSuffix>streetview</mat-icon>-->
         </mat-form-field>
       </td>
@@ -67,7 +82,12 @@
       <td>
         <mat-form-field class="example-full-width">
           <mat-label>Cidade</mat-label>
-          <input [(ngModel)]="cliente.cidade" name="" matInput />
+          <input
+            [(ngModel)]="cliente.cidade"
+            name=""
+            matInput
+            mask="capitalize"
+          />
           <!-- <mat-icon matSuffix> location_city</mat-icon>-->
         </mat-form-field>
       </td>
@@ -102,7 +122,12 @@
     <tr>
       <td colspan="3">
         <div class="buttons buttons-container">
-          <button class="btn-criar" mat-stroked-button color="primary">
+          <button
+            (click)="update()"
+            class="btn-criar"
+            mat-stroked-button
+            color="primary"
+          >
             Salvar
           </button>
           <button
