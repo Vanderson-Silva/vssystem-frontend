@@ -10,14 +10,14 @@
             matInput
             readonly
           />
-          <mat-icon matSuffix></mat-icon>
+          <!-- <mat-icon matSuffix></mat-icon>-->
         </mat-form-field>
       </td>
       <td>
         <mat-form-field class="example-full-width">
           <mat-label>Nome Completo</mat-label>
           <input [(ngModel)]="cliente.nome" class="input-field" matInput />
-          <mat-icon matSuffix>person</mat-icon>
+          <!-- <mat-icon matSuffix>person</mat-icon>-->
         </mat-form-field>
       </td>
 
@@ -28,7 +28,8 @@
             <mat-option value="Ativo">Ativo</mat-option>
             <mat-option value="Inativo">Inativo</mat-option>
           </mat-select>
-          <mat-icon matSuffix>expand_more</mat-icon>
+
+          <!--  <mat-icon matSuffix>expand_more</mat-icon>-->
         </mat-form-field>
       </td>
     </tr>
@@ -37,7 +38,7 @@
         <mat-form-field class="example-full-width">
           <mat-label>Endereco</mat-label>
           <input [(ngModel)]="cliente.endereco" name="" matInput />
-          <mat-icon matSuffix>location_on</mat-icon>
+          <!--  <mat-icon matSuffix>location_on</mat-icon>-->
         </mat-form-field>
       </td>
       <td>
@@ -50,7 +51,7 @@
             name=""
             matInput
           />
-          <mat-icon matSuffix> home</mat-icon>
+          <!--  <mat-icon matSuffix> home</mat-icon>-->
         </mat-form-field>
       </td>
 
@@ -58,7 +59,7 @@
         <mat-form-field class="example-full-width">
           <mat-label>Bairro</mat-label>
           <input [(ngModel)]="cliente.bairro" name="" matInput />
-          <mat-icon matSuffix>streetview</mat-icon>
+          <!--  <mat-icon matSuffix>streetview</mat-icon>-->
         </mat-form-field>
       </td>
     </tr>
@@ -67,19 +68,18 @@
         <mat-form-field class="example-full-width">
           <mat-label>Cidade</mat-label>
           <input [(ngModel)]="cliente.cidade" name="" matInput />
-          <mat-icon matSuffix> location_city</mat-icon>
+          <!-- <mat-icon matSuffix> location_city</mat-icon>-->
         </mat-form-field>
       </td>
       <td>
         <mat-form-field class="example-full-width">
           <mat-label>Telefone</mat-label>
-          <span matPrefix>+55 &nbsp;</span>
           <input
             [(ngModel)]="cliente.telefone"
             name=""
             type="tel"
             matInput
-            placeholder="043-3256-1234"
+            mask="phone"
           />
           <mat-icon matSuffix>settings_phone</mat-icon>
         </mat-form-field>
@@ -88,7 +88,12 @@
       <td>
         <mat-form-field class="example-full-width">
           <mat-label>Celuar</mat-label>
-          <input [(ngModel)]="cliente.celular" name="" matInput />
+          <input
+            [(ngModel)]="cliente.celular"
+            name=""
+            matInput
+            mask="cellphone"
+          />
           <mat-icon matSuffix>settings_cell</mat-icon>
         </mat-form-field>
       </td>
