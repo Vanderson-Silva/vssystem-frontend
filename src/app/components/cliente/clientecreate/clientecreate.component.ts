@@ -17,7 +17,7 @@ import {
 export class ClienteCreateComponent implements OnInit {
   formulario: FormGroup;
 
-  @ViewChild("campoNome", { static: false }) campoNome!: ElementRef;
+  @ViewChild("campoNome", { static: false }) campoNome!: ElementRef; // variavel para atribuir o curson no campo nome.
 
   ngOnInit(): void {
     this.formulario = this.formBuilder.group({
@@ -71,7 +71,7 @@ export class ClienteCreateComponent implements OnInit {
 
     if (this.cliente.nome == "") {
       this.clienteService.message("Campo Nome esta Vazio!");
-      this.campoNome.nativeElement.focus();
+      this.campoNome.nativeElement.focus(); // coloca o cursos para digitar no campo selecionado
     } else {
       this.cliente.status = status;
       this.clienteService.create(this.cliente).subscribe(
