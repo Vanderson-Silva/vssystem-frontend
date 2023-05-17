@@ -4,9 +4,26 @@
       <td>
         <mat-form-field class="example-full-width">
           <mat-label>Nome Completo</mat-label>
-          <input [(ngModel)]="cliente.nome" matInput mask="capitalize" />
+          <input
+            #campoNome
+            [(ngModel)]="cliente.nome"
+            matInput
+            [formControl]="nomeFormControl"
+            mask="capitalize"
+          />
           <mat-icon matSuffix>person</mat-icon>
         </mat-form-field>
+        <div
+          *ngIf="
+            formulario.controls['nome'].invalid &&
+            (formulario.controls['nome'].dirty ||
+              formulario.controls['nome'].touched)
+          "
+        >
+          <div *ngIf="formulario.controls['nome'].hasError('required')">
+            Campo obrigatório.
+          </div>
+        </div>
       </td>
       <td>
         <mat-form-field class="data-finalizar" appearance="fill">

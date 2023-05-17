@@ -1,8 +1,13 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import { Router } from "@angular/router";
 import { Cliente } from "src/app/models/cliente";
 import { ClienteService } from "src/app/services/cliente.service";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from "@angular/forms";
 
 @Component({
   selector: "app-cliente-create",
@@ -10,7 +15,9 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
   styleUrls: ["./clientecreate.component.css"],
 })
 export class ClienteCreateComponent implements OnInit {
-  formulario!: FormGroup;
+  formulario: FormGroup;
+
+  @ViewChild("campoNome", { static: false }) campoNome!: ElementRef;
 
   ngOnInit(): void {
     this.formulario = this.formBuilder.group({
@@ -22,7 +29,11 @@ export class ClienteCreateComponent implements OnInit {
     private router: Router,
     private clienteService: ClienteService,
     private formBuilder: FormBuilder
-  ) {}
+  ) {
+    this.formulario = new FormGroup({
+      nome: new FormControl("", Validators.required),
+    });
+  }
 
   status: string = "";
 
@@ -57,16 +68,26 @@ export class ClienteCreateComponent implements OnInit {
 
   create(status: string): void {
     this.formataData();
-    this.cliente.status = status;
-    this.clienteService.create(this.cliente).subscribe(
-      (resposta) => {
-        this.clienteService.message("Cliente Salvo com Sucesso!");
-        this.router.navigate(["clientelist"]);
-      },
-      (err) => {
-        this.clienteService.message("Erro ao salvar o Cliente");
-        this.router.navigate(["clientelist"]);
-      }
-    );
+
+    if (this.cliente.nome == "") {
+      this.clienteService.message("Campo Nome esta Vazio!");
+      this.campoNome.nativeElement.focus();
+    } else {
+      this.cliente.status = status;
+      this.clienteService.create(this.cliente).subscribe(
+        (resposta) => {
+          this.clienteService.message("Cliente Salvo com Sucesso!");
+          this.router.navigate(["clientelist"]);
+        },
+        (err) => {
+          this.clienteService.message("Erro ao salvar o Cliente");
+          this.router.navigate(["clientelist"]);
+        }
+      );
+    }
+  }
+  // validacao de campo de formulario.
+  get nomeFormControl(): FormControl {
+    return this.formulario.get("nome") as FormControl;
   }
 }

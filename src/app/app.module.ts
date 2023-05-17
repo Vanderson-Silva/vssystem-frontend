@@ -24,11 +24,11 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatSelectModule } from "@angular/material/select";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ClienteCreateComponent } from "./components/cliente/clientecreate/clientecreate.component";
 import { MatNativeDateModule } from "@angular/material/core";
 import { ClienteUpdateComponent } from "./components/cliente/clienteupdate/clienteupdate.component";
-import { MaskComponent } from './components/mask/mask.component';
+import { MaskComponent } from "./components/mask/mask.component";
 
 @NgModule({
   declarations: [
@@ -64,6 +64,7 @@ import { MaskComponent } from './components/mask/mask.component';
     MatDatepickerModule,
     MatSelectModule,
     MatNativeDateModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -72,10 +72,12 @@ th {
   background-color: white;
 }
 
+/* Adicionando um efeito de zebra as linhas da tabela */
+
 .table tr:nth-child(even) {
   background-color: #eceef8; /* cor das linhas pares */
 }
 
 .table tr:nth-child(odd) {
-  background-color: white; /* cor das linhas pares */
+  background-color: white; /* cor das linhas impares */
 }
