@@ -1,5 +1,4 @@
 .container {
-  padding-top: 0.8rem;
   width: 100%;
   margin: auto;
 }
@@ -16,6 +15,7 @@ p {
 }
 
 img {
+  border-radius: 0;
   display: flex;
   margin: auto;
   width: 100%;
