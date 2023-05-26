@@ -29,6 +29,7 @@ import { ClienteCreateComponent } from "./components/cliente/clientecreate/clien
 import { MatNativeDateModule } from "@angular/material/core";
 import { ClienteUpdateComponent } from "./components/cliente/clienteupdate/clienteupdate.component";
 import { MaskComponent } from "./components/mask/mask.component";
+import { FornecedorComponent } from './components/fornecedor/fornecedorlist/fornecedorlist.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { MaskComponent } from "./components/mask/mask.component";
     ClienteCreateComponent,
     ClienteUpdateComponent,
     MaskComponent,
+    FornecedorComponent,
   ],
   imports: [
     BrowserModule,
