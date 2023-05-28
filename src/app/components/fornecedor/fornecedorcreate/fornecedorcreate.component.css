@@ -1,0 +1,40 @@
+.container {
+    width: 100%;
+    margin: auto;
+    text-align: center; /* Alinha os filhos à direita */
+  }
+  
+  .table-full-width {
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    padding: 2rem;
+    background-color: white;
+  }
+  mat-form-field {
+    width: 100%;
+  }
+  .buttons {
+    margin: auto;
+    padding-right: 3.5rem;
+  }
+  .buttons-container {
+    text-align: right;
+  }
+  .buttons button:nth-child(1) {
+    background-color: rgb(2, 2, 51);
+    color: white;
+    margin-right: 1rem;
+  }
+  .buttons button:nth-child(2) {
+    background-color: rgb(244, 66, 54);
+    color: white;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    table td {
+      display: block;
+      width: 100%;
+    }
+  }
+  
