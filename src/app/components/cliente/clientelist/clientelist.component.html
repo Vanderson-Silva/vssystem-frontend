@@ -4,14 +4,8 @@
       <mat-label>Filter</mat-label>
       <input  matInput (keyup)="applyFilter($event)"placeholder="Ex.Vanderson" #input />
      </mat-form-field>
-    <button
-      (click)="cadastrar()"
-      class="botao-novo-cliente"
-      mat-raised-button
-      color="primary"
-    >
-      Novo Cliente
-    </button>
+    <button  (click)="cadastrar()" class="botao-novo-cliente"  mat-raised-button  color="primary" >
+      Novo Cliente  </button>
   </div>
 
   <div class="table mat-elevation-z8">

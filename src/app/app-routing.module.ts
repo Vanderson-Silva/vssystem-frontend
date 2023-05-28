@@ -6,6 +6,7 @@ import { ClienteListComponent } from "./components/cliente/clientelist/clienteli
 import { ClienteCreateComponent } from "./components/cliente/clientecreate/clientecreate.component";
 import { ClienteUpdateComponent } from "./components/cliente/clienteupdate/clienteupdate.component";
 import { FornecedorComponent } from "./components/fornecedor/fornecedorlist/fornecedorlist.component";
+import { FornecedorcreateComponent } from "./components/fornecedor/fornecedorcreate/fornecedorcreate.component";
 
 const routes: Routes = [
   {
@@ -17,7 +18,7 @@ const routes: Routes = [
       { path: "clientecreate", component: ClienteCreateComponent },
       { path: "clientelist/clienteupdate/:id", component: ClienteUpdateComponent},
       {path: "fornecedorlist",component:FornecedorComponent},
-      { path: "fornecedorcreate", component: ClienteCreateComponent },
+      { path: "fornecedorcreate", component: FornecedorcreateComponent },
     ],
   },
 ];
