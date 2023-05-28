@@ -2,13 +2,8 @@
   <div class="search-container">
     <mat-form-field class="pesquisar">
       <mat-label>Filter</mat-label>
-      <input
-        matInput
-        (keyup)="applyFilter($event)"
-        placeholder="Ex.Vanderson"
-        #input
-      />
-    </mat-form-field>
+      <input  matInput (keyup)="applyFilter($event)"placeholder="Ex.Vanderson" #input />
+     </mat-form-field>
     <button
       (click)="cadastrar()"
       class="botao-novo-cliente"

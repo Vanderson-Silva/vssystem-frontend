@@ -15,9 +15,7 @@ import { Router } from "@angular/router";
 export class ClienteListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(
-    private service: ClienteService,
-    public dialog: MatDialog,
+  constructor( private service: ClienteService,public dialog: MatDialog,
     private router: Router
   ) {}
 
