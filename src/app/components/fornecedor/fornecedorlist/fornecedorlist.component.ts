@@ -5,6 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Fornecedor } from 'src/app/models/fornecedor';
 import { FornecedorService } from 'src/app/services/fornecedor.service';
 import { DialogComponent } from '../../dialog/dialog.component';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,7 +16,7 @@ import { DialogComponent } from '../../dialog/dialog.component';
 export class FornecedorComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor( private service:FornecedorService, public dialog: MatDialog) {}
+  constructor( private service:FornecedorService, public dialog: MatDialog, private router:Router) {}
 
   ngOnInit(): void {
     this.findAll();
@@ -42,7 +43,9 @@ export class FornecedorComponent implements OnInit {
 
  
  
-
+  cadastrar(): void {
+    this.router.navigate(["fornecedorcreate"]);
+  }
   
 // metodo de listar todos os Fornecedores
 findAll(){

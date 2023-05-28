@@ -31,6 +31,7 @@ import { ClienteUpdateComponent } from "./components/cliente/clienteupdate/clien
 import { MaskComponent } from "./components/mask/mask.component";
 import { FornecedorComponent } from './components/fornecedor/fornecedorlist/fornecedorlist.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +44,7 @@ import { FornecedorComponent } from './components/fornecedor/fornecedorlist/forn
     ClienteUpdateComponent,
     MaskComponent,
     FornecedorComponent,
+    
   ],
   imports: [
     BrowserModule,
