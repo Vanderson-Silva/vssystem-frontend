@@ -1,14 +1,15 @@
-import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
-import { Router } from "@angular/router";
-import { FormBuilder, FormControl,FormGroup,  Validators,} from "@angular/forms";
-import { FornecedorService } from "src/app/services/fornecedor.service";
-import { Fornecedor } from "src/app/models/fornecedor";
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Fornecedor } from 'src/app/models/fornecedor';
+import { FornecedorService } from 'src/app/services/fornecedor.service';
 
 @Component({
   selector: 'app-fornecedorcreate',
   templateUrl: './fornecedorcreate.component.html',
   styleUrls: ['./fornecedorcreate.component.css']
 })
+
 export class FornecedorcreateComponent implements OnInit{
   formulario: FormGroup;
 

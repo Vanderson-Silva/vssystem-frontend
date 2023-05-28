@@ -18,7 +18,6 @@ import { MatCardModule } from "@angular/material/card";
 import { FooterComponent } from "./components/footer/footer.component";
 import { HttpClientModule } from "@angular/common/http";
 import { MatTableModule } from "@angular/material/table";
-import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { MatDialogModule } from "@angular/material/dialog";
@@ -30,6 +29,10 @@ import { MatNativeDateModule } from "@angular/material/core";
 import { ClienteUpdateComponent } from "./components/cliente/clienteupdate/clienteupdate.component";
 import { MaskComponent } from "./components/mask/mask.component";
 import { FornecedorComponent } from './components/fornecedor/fornecedorlist/fornecedorlist.component';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { FornecedorcreateComponent } from './components/fornecedor/fornecedorcreate/fornecedorcreate.component';
+import { FornecedorupdateComponent } from './components/fornecedorupdate/fornecedorupdate.component';
+
 
 
 @NgModule({
@@ -44,6 +47,8 @@ import { FornecedorComponent } from './components/fornecedor/fornecedorlist/forn
     ClienteUpdateComponent,
     MaskComponent,
     FornecedorComponent,
+    FornecedorcreateComponent,
+    FornecedorupdateComponent,
     
   ],
   imports: [
@@ -69,6 +74,7 @@ import { FornecedorComponent } from './components/fornecedor/fornecedorlist/forn
     MatSelectModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent],
