@@ -22,6 +22,15 @@
         ></div>
       </td>
       <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Cpf</mat-label>
+          <input #campoCpf [(ngModel)]="cliente.cpf" matInput  />
+          <mat-icon matSuffix>credit_card</mat-icon>
+        </mat-form-field>
+      </td>
+
+
+      <td>
         <mat-form-field class="data-finalizar" appearance="fill">
           <mat-label>Data Cadastro</mat-label>
           <input
@@ -80,12 +89,7 @@
       <td>
         <mat-form-field class="example-full-width">
           <mat-label>Bairro</mat-label>
-          <input
-            [(ngModel)]="cliente.bairro"
-            name=""
-            matInput
-            mask="capitalize"
-          />
+          <input  [(ngModel)]="cliente.bairro"   name=""  matInput  mask="capitalize" />
           <mat-icon matSuffix>streetview</mat-icon>
         </mat-form-field>
       </td>

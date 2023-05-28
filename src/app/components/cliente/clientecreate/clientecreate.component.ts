@@ -40,6 +40,7 @@ export class ClienteCreateComponent implements OnInit {
   //criando uma instancia de Todo
   cliente: Cliente = {
     nome: "",
+    cpf: "",
     dataCadastro: new Date(),
     status: "",
     endereco: "",
@@ -68,7 +69,6 @@ export class ClienteCreateComponent implements OnInit {
 
   create(status: string): void {
     this.formataData();
-
     if (this.cliente.nome == "") {
       this.clienteService.message("Campo Nome esta Vazio!");
       this.campoNome.nativeElement.focus(); // coloca o cursos para digitar no campo selecionado

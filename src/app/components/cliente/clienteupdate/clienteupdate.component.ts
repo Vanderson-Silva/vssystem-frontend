@@ -18,6 +18,7 @@ export class ClienteUpdateComponent implements OnInit {
   //criando uma instancia de Todo
   cliente: Cliente = {
     nome: "",
+    cpf: "",
     dataCadastro: new Date(),
     status: "",
     endereco: "",

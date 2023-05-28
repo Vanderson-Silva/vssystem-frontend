@@ -10,7 +10,7 @@
             matInput
             readonly
           />
-          <!-- <mat-icon matSuffix></mat-icon>-->
+           <mat-icon matSuffix></mat-icon>
         </mat-form-field>
       </td>
       <td>
@@ -22,7 +22,15 @@
             matInput
             mask="capitalize"
           />
-          <!-- <mat-icon matSuffix>person</mat-icon>-->
+         <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+      </td>
+
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Cpf</mat-label>
+          <input [(ngModel)]="cliente.cpf"  class="input-field"  matInput  />
+         <mat-icon matSuffix>credit_card</mat-icon>
         </mat-form-field>
       </td>
 
