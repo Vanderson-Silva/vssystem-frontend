@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Fornecedor } from 'src/app/models/fornecedor';
 import { FornecedorService } from 'src/app/services/fornecedor.service';
+import { DialogComponent } from '../../dialog/dialog.component';
 
 
 @Component({
@@ -13,7 +15,7 @@ import { FornecedorService } from 'src/app/services/fornecedor.service';
 export class FornecedorComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor( private service:FornecedorService) {}
+  constructor( private service:FornecedorService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.findAll();
@@ -62,8 +64,27 @@ findAll(){
   this.dataSource.filter = filterValue.trim().toLowerCase();
 }
 
- 
-
+delete(id: any): void{
+  const dialogRef = this.dialog.open(DialogComponent,{
+    data: "Deseja Realmente Excluir esse Fornecedor?",
+  });
+  dialogRef.afterClosed().subscribe((result:boolean) => {
+    if(result) {
+      this.service.delete(id).subscribe(
+        (resposta) => {
+          if(resposta ==null){
+            this.service.message("Fornecedor Excluido com Sucesso!");
+          }
+          this.findAll();
+        },
+        (error) => {
+          console.error("Erro ao excluir Fornecedor:", error);
+          this.service.message("Erro ao excluir Fornecedor.");
+        }
+        );
+      }
+    });
+  }
 }
 
 
