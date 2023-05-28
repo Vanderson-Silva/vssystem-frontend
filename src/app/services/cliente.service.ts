@@ -5,9 +5,8 @@ import { Observable } from "rxjs";
 import { environment } from "../environment/environment";
 import { MatSnackBar } from "@angular/material/snack-bar";
 
-@Injectable({
-  providedIn: "root",
-})
+@Injectable({providedIn: "root",})
+
 export class ClienteService {
   baseUrlCliente = environment.baseUrlCliente;
 
