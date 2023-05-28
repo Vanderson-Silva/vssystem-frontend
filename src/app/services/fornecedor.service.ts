@@ -40,6 +40,10 @@ export class FornecedorService {
       return this.http.get<Fornecedor>(url);
     }
   
+      // metodo para salvar um cliente.
+  create(fornecedor: Fornecedor): Observable<Fornecedor> {
+    return this.http.post<Fornecedor>(this.baseUrlFornecedor, fornecedor);
+  }
  
  
 }
