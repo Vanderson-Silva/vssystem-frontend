@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+
 
 @Component({
   selector: 'app-fornecedor',
@@ -6,5 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./fornecedorlist.component.css']
 })
 export class FornecedorComponent {
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  constructor( ) {}
+
+  ngOnInit(): void {
+   
+  }
+
+  
+
+ 
+ 
 
 }
+
+
