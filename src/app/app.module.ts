@@ -31,7 +31,8 @@ import { MaskComponent } from "./components/mask/mask.component";
 import { FornecedorComponent } from './components/fornecedor/fornecedorlist/fornecedorlist.component';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { FornecedorcreateComponent } from './components/fornecedor/fornecedorcreate/fornecedorcreate.component';
-import { FornecedorupdateComponent } from './components/fornecedorupdate/fornecedorupdate.component';
+import { FornecedorUpdateComponent } from "./components/fornecedorupdate/fornecedorupdate.component";
+
 
 
 
@@ -48,7 +49,7 @@ import { FornecedorupdateComponent } from './components/fornecedorupdate/fornece
     MaskComponent,
     FornecedorComponent,
     FornecedorcreateComponent,
-    FornecedorupdateComponent,
+    FornecedorUpdateComponent,
     
   ],
   imports: [
