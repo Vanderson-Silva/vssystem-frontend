@@ -13,8 +13,17 @@ export class FornecedorService {
 
   constructor(private http:HttpClient) { }
 
-  // Metodo Responsavel por listar todos fornecedores.
-  findAll(): Observable<Fornecedor[]>{
-    return this.http.get<Fornecedor[]>(this.baseUrlFornecedor);
-  }
+    // Metodo Responsavel por listar todos fornecedores.
+    findAll(): Observable<Fornecedor[]> {
+      return this.http.get<Fornecedor[]>(this.baseUrlFornecedor);
+    }
+
+
+    findById(id: any): Observable<Fornecedor> {
+      const url = `${this.baseUrlFornecedor}/${id}`;
+      return this.http.get<Fornecedor>(url);
+    }
+  
+ 
+ 
 }

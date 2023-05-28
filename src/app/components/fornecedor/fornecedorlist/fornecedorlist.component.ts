@@ -20,10 +20,9 @@ export class FornecedorComponent implements OnInit {
    
   }
 
-  ELEMENT_DATA: Fornecedor[]=[];
+  ELEMENT_DATA: Fornecedor[] = [];
 
- 
-  displayedColumsn: string[] = [
+  displayedColumns: string[] = [
     "id",
     "nome",
     "cnpj",
@@ -39,6 +38,9 @@ export class FornecedorComponent implements OnInit {
   ];
   dataSource = new MatTableDataSource<Fornecedor>(this.ELEMENT_DATA);
 
+ 
+ 
+
   
 // metodo de listar todos os Fornecedores
 findAll(){
@@ -46,7 +48,12 @@ findAll(){
     this.ELEMENT_DATA = resposta;
     this.dataSource = new MatTableDataSource<Fornecedor>(resposta);
     this.dataSource.paginator = this.paginator;
-  });
+    console.log('Resposta Recebida:', resposta);
+  },
+  (error) => {
+    console.error('Erro de Solicitacao' ,error);
+  }
+  );
 }
  
  // metodo busca de Pesquisa.
