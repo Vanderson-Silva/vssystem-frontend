@@ -33,6 +33,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { FornecedorcreateComponent } from './components/fornecedor/fornecedorcreate/fornecedorcreate.component';
 import { FornecedorUpdateComponent } from "./components/fornecedorupdate/fornecedorupdate.component";
 import { ProdutolistComponent } from './components/produto/produtolist/produtolist.component';
+import { ProdutoComponent } from './services/produto/produto.component';
 
 
 
@@ -52,6 +53,7 @@ import { ProdutolistComponent } from './components/produto/produtolist/produtoli
     FornecedorcreateComponent,
     FornecedorUpdateComponent,
     ProdutolistComponent,
+    ProdutoComponent,
     
   ],
   imports: [
