@@ -7,8 +7,9 @@ import { ClienteCreateComponent } from "./components/cliente/clientecreate/clien
 import { ClienteUpdateComponent } from "./components/cliente/clienteupdate/clienteupdate.component";
 import { FornecedorComponent } from "./components/fornecedor/fornecedorlist/fornecedorlist.component";
 import { FornecedorcreateComponent } from "./components/fornecedor/fornecedorcreate/fornecedorcreate.component";
-import { FornecedorUpdateComponent } from "./components/fornecedorupdate/fornecedorupdate.component";
 import { ProdutolistComponent } from "./components/produto/produtolist/produtolist.component";
+import { FornecedorUpdateComponent } from "./components/fornecedor/fornecedorupdate/fornecedorupdate.component";
+import { ProdutocreateComponent } from "./components/produto/produtocreate/produtocreate.component";
 
 const routes: Routes = [
   {
@@ -23,6 +24,7 @@ const routes: Routes = [
       { path: "fornecedorcreate", component: FornecedorcreateComponent },
       { path: "fornecedorlist/fornecedorupdate/:id", component: FornecedorUpdateComponent},
       { path: "produtolist", component: ProdutolistComponent },
+      {path: "produtocreate", component: ProdutocreateComponent},
     ],
   },
 ];
