@@ -1,1 +1,101 @@
-<p>produtocreate works!</p>
+<div class="container">
+    <table class="table-full-width">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Referência</mat-label>
+            <input #campoReferencia [(ngModel)]="produto.referencia" matInput [formControl]="referenciaFormControl" mask="capitalize"/>
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+          <div *ngIf="formulario.controls['referencia'].invalid &&(formulario.controls['referencia'].dirty ||formulario.controls['referencia'].touched)"></div>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Descrição</mat-label>
+            <input #campoDescricao [(ngModel)]="produto.descricao" matInput  [formControl]="descricaoFormControl"  mask="capitalize"/>
+            <mat-icon matSuffix>credit_card</mat-icon>
+          </mat-form-field>
+          <div *ngIf="formulario.controls['descricao'].invalid &&(formulario.controls['descricao'].dirty ||formulario.controls['descricao'].touched)"></div>
+        
+        </td> 
+        <td>
+          <mat-form-field class="data-finalizar" appearance="fill">
+            <mat-label>Data Cadastro</mat-label>
+            <input [(ngModel)]="produto.dataCadastro" name="dataCadastro" matInput [matDatepicker]="dp3" disabled/>
+            <mat-datepicker-toggle
+              matIconSuffix  [for]="dp3"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+          </mat-form-field>
+         
+        
+        </td>        
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field appearance="fill">
+            <mat-label>Status</mat-label>
+            <mat-select (selectionChange)="onStatusSelected($event)">
+              <mat-option value="Ativo">Ativo</mat-option>
+              <mat-option value="Inativo">Inativo</mat-option>
+            </mat-select>
+            <mat-icon matSuffix>expand_more</mat-icon>
+          </mat-form-field>
+          </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Unidade Produto</mat-label>
+            <input
+              [(ngModel)]="produto.qtdmlprod"
+              name=""
+              matInput
+              mask="capitalize"
+            />
+            <mat-icon matSuffix>location_on</mat-icon>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Valor Compra</mat-label>   
+            <input [(ngModel)]="produto.valorCompra" name="" matInput  mask="dinheiro" />
+   
+           
+            <mat-icon matSuffix> home</mat-icon>
+          </mat-form-field>
+        </td>  
+      </tr>
+      <tr>        
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Valor venda</mat-label>
+            <input  [(ngModel)]="produto.valorVenda"   name=""  matInput mask="dinheiro" />
+            <mat-icon matSuffix>streetview</mat-icon>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Fornecedor</mat-label>
+            <input
+              [(ngModel)]="produto.fornecedor" name="" matInput  mask="capitalize"/>
+            <mat-icon matSuffix> location_city</mat-icon>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Qtd</mat-label>
+            <input [(ngModel)]="produto.qdtEstoque" name="" type="tel"  matInput     mask="phone"/>
+            <mat-icon matSuffix>settings_phone</mat-icon>
+          </mat-form-field>
+        </td>        
+      </tr>  
+      <tr>
+        <td colspan="3">
+          <div class="buttons buttons-container">
+            <button class="btn-criar" (click)="create(status)" mat-stroked-button color="primary">Salvar</button>
+            <button class="btn-cancelar"  (click)="cancelar()"  mat-stroked-button color="warn"> Cancelar </button>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  

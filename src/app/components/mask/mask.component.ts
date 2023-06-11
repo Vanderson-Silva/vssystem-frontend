@@ -40,6 +40,13 @@ export class MaskComponent {
         input.value = this.capitalize(value);
         break;
 
+      case "dinheiro":
+        const valorNumerico = parseFloat(trimmed.replace(/\D/g,'').replace(',', '.'));
+        const formatValorNumerico = (valorNumerico / 100).toFixed(2);       
+        const finalFormatValores = formatValorNumerico.replace(",", ".");        
+        input.value = finalFormatValores;       
+        break;
+
       default:
         input.value = trimmed;
         break;

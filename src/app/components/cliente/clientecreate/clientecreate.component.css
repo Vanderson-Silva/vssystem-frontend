@@ -2,6 +2,7 @@
   width: 100%;
   margin: auto;
   text-align: center; /* Alinha os filhos à direita */
+  overflow-x: auto;
 }
 
 .table-full-width {
@@ -12,7 +13,8 @@
   background-color: white;
 }
 mat-form-field {
-  width: 100%;
+  max-width: 100%;
+  
 }
 .buttons {
   margin: auto;

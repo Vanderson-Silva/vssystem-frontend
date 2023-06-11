@@ -12,6 +12,7 @@ import { FornecedorService } from 'src/app/services/fornecedor.service';
 
 export class FornecedorcreateComponent implements OnInit{
   formulario: FormGroup;
+  status: string = "";
 
   @ViewChild("campoNome", { static: false }) campoNome!: ElementRef; // variavel para atribuir o curson no campo nome.
 
@@ -22,14 +23,13 @@ export class FornecedorcreateComponent implements OnInit{
     });
   }
 
-  constructor( private router: Router,private fornecedorService: FornecedorService,
-    private formBuilder: FormBuilder ) {
+  constructor( private router: Router,private fornecedorService: FornecedorService, private formBuilder: FormBuilder) {
     this.formulario = new FormGroup({
       nome: new FormControl("", Validators.required),
     });
   }
 
-  status: string = "";
+
 
   //criando uma instancia de Fornecedor
   fornecedor: Fornecedor = {
