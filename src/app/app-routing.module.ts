@@ -10,6 +10,7 @@ import { FornecedorcreateComponent } from "./components/fornecedor/fornecedorcre
 import { ProdutolistComponent } from "./components/produto/produtolist/produtolist.component";
 import { FornecedorUpdateComponent } from "./components/fornecedor/fornecedorupdate/fornecedorupdate.component";
 import { ProdutocreateComponent } from "./components/produto/produtocreate/produtocreate.component";
+import { ProdutoupdateComponent } from "./components/produto/produtoupdate/produtoupdate.component";
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const routes: Routes = [
       { path: "fornecedorlist/fornecedorupdate/:id", component: FornecedorUpdateComponent},
       { path: "produtolist", component: ProdutolistComponent },
       {path: "produtocreate", component: ProdutocreateComponent},
+      { path: "produtolist/produtoupdate/:id", component: ProdutoupdateComponent},
     ],
   },
 ];
