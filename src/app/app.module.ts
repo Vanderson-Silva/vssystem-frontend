@@ -34,6 +34,7 @@ import { FornecedorcreateComponent } from './components/fornecedor/fornecedorcre
 import { ProdutolistComponent } from './components/produto/produtolist/produtolist.component';
 import { ProdutocreateComponent } from './components/produto/produtocreate/produtocreate.component';
 import { FornecedorUpdateComponent } from "./components/fornecedor/fornecedorupdate/fornecedorupdate.component";
+import { ProdutoupdateComponent } from './components/produto/produtoupdate/produtoupdate.component';
 
 
 
@@ -55,6 +56,7 @@ import { FornecedorUpdateComponent } from "./components/fornecedor/fornecedorupd
     FornecedorUpdateComponent,
     ProdutolistComponent,
     ProdutocreateComponent,
+    ProdutoupdateComponent,
     
   ],
   imports: [
