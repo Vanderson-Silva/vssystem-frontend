@@ -65,7 +65,7 @@
         <ng-container matColumnDef="acoes">
           <th mat-header-cell *matHeaderCellDef>Ações</th>
           <td mat-cell *matCellDef="let element">
-            <a class="botoes" 
+            <a class="botoes" routerLink="produtoupdate/{{ element.id }}"
               ><i class="material-icons edit">edit</i></a
             >
             <a class="botoes" (click)="delete(element.id)"

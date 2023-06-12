@@ -4,52 +4,41 @@
         <td>
           <mat-form-field class="example-full-width">
             <mat-label>Id</mat-label>
-            <input
-              [(ngModel)]="produto.id"
-              class="input-field"
-              matInput
-              readonly
-            />
-             <mat-icon matSuffix></mat-icon>
+            <input  [(ngModel)]="produto.id" class="input-field"  matInput  readonly/>
+            <!--  <mat-icon matSuffix>streetview</mat-icon>-->
           </mat-form-field>
         </td>
         <td>
           <mat-form-field class="example-full-width">
-            <mat-label>Referencia</mat-label>
-            <input
-              [(ngModel)]="produto.referencia"
-              class="input-field"
-              matInput
-              mask="capitalize"
-            />
-           <mat-icon matSuffix>person</mat-icon>
+            <mat-label>Referência</mat-label>
+            <input [(ngModel)]="produto.referencia" class="input-field"  matInput  mask="capitalize"/>
+          <!--  <mat-icon matSuffix>streetview</mat-icon>-->
           </mat-form-field>
         </td>
   
         <td>
           <mat-form-field class="example-full-width">
-            <mat-label>Descricao</mat-label>
+            <mat-label>Descrição</mat-label>
             <input [(ngModel)]="produto.descricao"  class="input-field"  matInput  />
-           <mat-icon matSuffix>credit_card</mat-icon>
+           <!-- <mat-icon matSuffix>credit_card</mat-icon> -->
           </mat-form-field>
         </td>
-  
+      </tr>  
+      <tr>
         <td>
           <mat-form-field appearance="fill">
             <mat-label>Status</mat-label>
             <mat-select [(ngModel)]="produto.status" name="status">
               <mat-option value="Ativo">Ativo</mat-option>
               <mat-option value="Inativo">Inativo</mat-option>
-            </mat-select>
-  
+            </mat-select>  
             <!--  <mat-icon matSuffix>expand_more</mat-icon>-->
           </mat-form-field>
-        </td>
-      </tr>
-      <tr>
+        </td>    
+     
         <td>
           <mat-form-field class="example-full-width">
-            <mat-label>Endereco</mat-label>
+            <mat-label>Unidade Produto</mat-label>
             <input
               [(ngModel)]="produto.qtdmlprod"
               name=""
@@ -61,7 +50,7 @@
         </td>
         <td>
           <mat-form-field class="example-full-width">
-            <mat-label>Numero</mat-label>
+            <mat-label>Valor Compra</mat-label>
             <input
               type="text"
               onkeypress="return event.charCode >= 48 && event.charCode <= 57"
@@ -72,10 +61,11 @@
             <!--  <mat-icon matSuffix> home</mat-icon>-->
           </mat-form-field>
         </td>
-  
+      </tr>  
+      <tr>
         <td>
           <mat-form-field class="example-full-width">
-            <mat-label>Bairro</mat-label>
+            <mat-label>Valor Venda</mat-label>
             <input
               [(ngModel)]="produto.valorVenda"
               name=""
@@ -84,43 +74,28 @@
             />
             <!--  <mat-icon matSuffix>streetview</mat-icon>-->
           </mat-form-field>
-        </td>
-      </tr>
-      <tr>
+        </td> 
         <td>
           <mat-form-field class="example-full-width">
-            <mat-label>Cidade</mat-label>
-            <input
-              [(ngModel)]="produto.fornecedor"
-              name=""
-              matInput
-              mask="capitalize"
+            <mat-label>Fornecedor</mat-label>
+            <input [(ngModel)]="produto.fornecedor"  name=""matInput mask="capitalize"
             />
             <!-- <mat-icon matSuffix> location_city</mat-icon>-->
           </mat-form-field>
         </td>
         <td>
           <mat-form-field class="example-full-width">
-            <mat-label>Telefone</mat-label>
-            <input
-              [(ngModel)]="produto.qdtEstoque"
-              name=""
-              type="tel"
-              matInput
-              mask="phone"
-            />
-            <mat-icon matSuffix>settings_phone</mat-icon>
+            <mat-label>Qtd. Estoque</mat-label>
+            <input  [(ngModel)]="produto.qdtEstoque" name="" type="tel" matInput mask="phone"/>
+           <!--  <mat-icon matSuffix>streetview</mat-icon>-->
           </mat-form-field>
         </td>
-  
-        
-      </tr>
-  
+      </tr>  
       <tr>
         <td colspan="3">
           <div class="buttons buttons-container">
             <button
-             
+            (click)="update()"
               class="btn-criar"
               mat-stroked-button
               color="primary"
@@ -128,7 +103,7 @@
               Salvar
             </button>
             <button
-              
+            (click)="cancelar()"
               class="btn-cancelar"
               mat-stroked-button
               color="warn"
