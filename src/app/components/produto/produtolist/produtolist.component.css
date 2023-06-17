@@ -63,6 +63,11 @@ th {
 .delete {
   color: rgb(237, 68, 61);
 }
+.inventory{
+ 
+  color: rgb(6, 129, 43);
+  }
+  
 
 .paginator {
   width: 100%;
@@ -72,6 +77,7 @@ th {
   padding-bottom: 1.5rem;
   background-color: white;
 }
+
 
 /* Adicionando um efeito de zebra as linhas da tabela */
 
