@@ -51,12 +51,8 @@
         <td>
           <mat-form-field class="example-full-width">
             <mat-label>Valor Compra</mat-label>
-            <input
-              type="text"
-              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-              [(ngModel)]="produto.valorCompra"
-              name=""
-              matInput readonly
+            <input type="text"  onkeypress="return event.charCode >= 48 && event.charCode <= 57" [(ngModel)]="produto.valorCompra"
+              name="" matInput readonly
             />
             <!--  <mat-icon matSuffix> home</mat-icon>-->
           </mat-form-field>
@@ -95,7 +91,7 @@
         <td>
           <mat-form-field class="example-full-width">
             <mat-label>Quantidade</mat-label>
-            <input   type="tel" matInput />
+            <input   type="number" [(ngModel)]="qtdEntrada" matInput />
            <!--  <mat-icon matSuffix>streetview</mat-icon>-->
           </mat-form-field>
         </td>
@@ -104,7 +100,7 @@
       <tr>
         <td colspan="4">
           <div class="buttons buttons-container">
-            <button  class="btn-criar" mat-stroked-button color="primary">Entrada de Estoque</button>
+            <button (click)="entradaEstoque(qtdEntrada)" class="btn-criar" mat-stroked-button color="primary">Entrada de Estoque</button>
             <button  class="btn-criar" mat-stroked-button color="primary">Saida de Estoque</button>
             <button  class="btn-criar" mat-stroked-button color="primary">Ajuste de Estoque</button>                     
             <button (click)="cancelar()" class="btn-cancelar" mat-stroked-button color="warn">Voltar</button>

@@ -8,7 +8,10 @@ import { ProdutoService } from 'src/app/services/produto.service';
   templateUrl: './produtoestoque.component.html',
   styleUrls: ['./produtoestoque.component.css']
 })
+
 export class ProdutoestoqueComponent implements OnInit {
+
+  qtdEntrada: number = 0;
 
   constructor(
     private router: Router,
@@ -29,8 +32,7 @@ export class ProdutoestoqueComponent implements OnInit {
     valorCompra: 0.0,
     valorVenda: 0.0,
     fornecedor: "",
-    qdtEstoque: 0, 
-
+    qdtEstoque: 0,   
   }
 
   findById(): void {
@@ -63,4 +65,20 @@ export class ProdutoestoqueComponent implements OnInit {
     this.router.navigate(["produtolist"]);
   }
 
+  entradaEstoque(qtdEntrada:number){
+  let novaEntrada =  this.produto.qdtEstoque;    
+  let novoValor =  novaEntrada + qtdEntrada;
+  this.produto.qdtEstoque = novoValor;
+  this.service.update(this.produto).subscribe(
+    (resposta) => {
+      this.service.message("Entrada no Estoque com Sucesso!");
+      this.router.navigate(["produtolist"]);
+    },
+    (err) => {
+      this.service.message("Erro na Entrada de Estoque!");
+      this.router.navigate(["produtolist"]);
+    }
+  )}
+
+ 
 }
