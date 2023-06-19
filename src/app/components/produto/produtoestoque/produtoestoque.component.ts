@@ -80,5 +80,20 @@ export class ProdutoestoqueComponent implements OnInit {
     }
   )}
 
+  saidaEstoque(qtdEntrada:number){
+    let novaEntrada =  this.produto.qdtEstoque;    
+    let novoValor =  novaEntrada - qtdEntrada;
+    this.produto.qdtEstoque = novoValor;
+    this.service.update(this.produto).subscribe(
+      (resposta) => {
+        this.service.message("Baixa no Estoque com Sucesso!");
+        this.router.navigate(["produtolist"]);
+      },
+      (err) => {
+        this.service.message("Erro na Baixa de Estoque!");
+        this.router.navigate(["produtolist"]);
+      }
+    )}
+
  
 }
