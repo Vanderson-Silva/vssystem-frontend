@@ -95,5 +95,18 @@ export class ProdutoestoqueComponent implements OnInit {
       }
     )}
 
+    ajusteEstoque(qtdEntrada:number){      
+      this.produto.qdtEstoque = qtdEntrada;
+      this.service.update(this.produto).subscribe(
+        (resposta) => {
+          this.service.message("Ajuste de Estoque com Sucesso!");
+          this.router.navigate(["produtolist"]);
+        },
+        (err) => {
+          this.service.message("Erro ao Ajustar o Estoque!");
+          this.router.navigate(["produtolist"]);
+        }
+      )}
+
  
 }
