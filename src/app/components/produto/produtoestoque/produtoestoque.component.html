@@ -1,0 +1,116 @@
+<div class="container">
+    <table class="table-full-width">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input  [(ngModel)]="produto.id" class="input-field"  matInput  readonly/>
+            <!--  <mat-icon matSuffix>streetview</mat-icon>-->
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Referência</mat-label>
+            <input [(ngModel)]="produto.referencia" class="input-field"  matInput  mask="capitalize" readonly/>
+          <!--  <mat-icon matSuffix>streetview</mat-icon>-->
+          </mat-form-field>
+        </td>
+  
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Descrição</mat-label>
+            <input [(ngModel)]="produto.descricao"  class="input-field"  matInput  readonly />
+           <!-- <mat-icon matSuffix>credit_card</mat-icon> -->
+          </mat-form-field>
+        </td>
+      </tr>  
+      <tr>
+        <td>
+          <mat-form-field appearance="fill">
+            <mat-label>Status</mat-label>
+            <mat-select [(ngModel)]="produto.status" name="status" disabled>
+              <mat-option value="Ativo">Ativo</mat-option>
+              <mat-option value="Inativo">Inativo</mat-option>
+            </mat-select>  
+            <!--  <mat-icon matSuffix>expand_more</mat-icon>-->
+          </mat-form-field>
+        </td>    
+     
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Unidade Produto</mat-label>
+            <input
+              [(ngModel)]="produto.qtdmlprod"
+              name=""
+              matInput
+              mask="capitalize" readonly
+            />
+            <!--  <mat-icon matSuffix>location_on</mat-icon>-->
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Valor Compra</mat-label>
+            <input
+              type="text"
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+              [(ngModel)]="produto.valorCompra"
+              name=""
+              matInput readonly
+            />
+            <!--  <mat-icon matSuffix> home</mat-icon>-->
+          </mat-form-field>
+        </td>
+      </tr>  
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Valor Venda</mat-label>
+            <input
+              [(ngModel)]="produto.valorVenda"
+              name=""
+              matInput
+              mask="capitalize" readonly
+            />
+            <!--  <mat-icon matSuffix>streetview</mat-icon>-->
+          </mat-form-field>
+        </td> 
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Fornecedor</mat-label>
+            <input [(ngModel)]="produto.fornecedor"  name=""matInput mask="capitalize" readonly
+            />
+            <!-- <mat-icon matSuffix> location_city</mat-icon>-->
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Qtd. Estoque</mat-label>
+            <input  [(ngModel)]="produto.qdtEstoque" name="" type="tel" matInput readonly/>
+           <!--  <mat-icon matSuffix>streetview</mat-icon>-->
+          </mat-form-field>
+        </td>
+      </tr>  
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Quantidade</mat-label>
+            <input   type="tel" matInput />
+           <!--  <mat-icon matSuffix>streetview</mat-icon>-->
+          </mat-form-field>
+        </td>
+
+      </tr>
+      <tr>
+        <td colspan="4">
+          <div class="buttons buttons-container">
+            <button  class="btn-criar" mat-stroked-button color="primary">Entrada de Estoque</button>
+            <button  class="btn-criar" mat-stroked-button color="primary">Saida de Estoque</button>
+            <button  class="btn-criar" mat-stroked-button color="primary">Ajuste de Estoque</button>                     
+            <button (click)="cancelar()" class="btn-cancelar" mat-stroked-button color="warn">Voltar</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  

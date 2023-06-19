@@ -35,7 +35,7 @@ import { ProdutolistComponent } from './components/produto/produtolist/produtoli
 import { ProdutocreateComponent } from './components/produto/produtocreate/produtocreate.component';
 import { FornecedorUpdateComponent } from "./components/fornecedor/fornecedorupdate/fornecedorupdate.component";
 import { ProdutoupdateComponent } from './components/produto/produtoupdate/produtoupdate.component';
-
+import { ProdutoestoqueComponent } from './components/produto/produtoestoque/produtoestoque.component';
 
 
 
@@ -57,6 +57,8 @@ import { ProdutoupdateComponent } from './components/produto/produtoupdate/produ
     ProdutolistComponent,
     ProdutocreateComponent,
     ProdutoupdateComponent,
+    ProdutoestoqueComponent,
+    
     
   ],
   imports: [
