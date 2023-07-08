@@ -36,6 +36,7 @@ import { ProdutocreateComponent } from './components/produto/produtocreate/produ
 import { FornecedorUpdateComponent } from "./components/fornecedor/fornecedorupdate/fornecedorupdate.component";
 import { ProdutoupdateComponent } from './components/produto/produtoupdate/produtoupdate.component';
 import { ProdutoestoqueComponent } from './components/produto/produtoestoque/produtoestoque.component';
+import { MatTooltipModule } from "@angular/material/tooltip";
 
 
 
@@ -84,6 +85,7 @@ import { ProdutoestoqueComponent } from './components/produto/produtoestoque/pro
     MatSelectModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    MatTooltipModule
    
   ],
   providers: [],

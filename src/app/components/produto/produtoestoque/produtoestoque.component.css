@@ -15,23 +15,33 @@
   mat-form-field {
     max-width: 100%;
   }
-  .buttons {
-    margin: auto;
-    padding-right: 3.5rem;
+  .buttons {    
+    text-align: right;    
   }
-  .buttons-container {
-    text-align: right;
+
+  .buttons button{
+    margin-right: 10px;
   }
+
   .buttons button:nth-child(1) {
     background-color: rgb(2, 2, 51);
-    color: white;
-    margin-right: 1rem;
+    color: white;    
   }
   .buttons button:nth-child(2) {
+    background-color: rgb(80, 4, 67);
+    color: white;
+  }
+  .buttons button:nth-child(3) {
+    background-color: rgb(10, 126, 26);
+    color: white;
+   padding: auto;   
+  } 
+  .buttons button:nth-child(4) {
     background-color: rgb(244, 66, 54);
     color: white;
   }
   
+
   @media only screen and (max-width: 600px) {
     table td {
       display: block;
